@@ -1,6 +1,9 @@
+FROM node:16.13.1-alpine as node
 # ベースイメージを指定する
 # FROM ベースイメージ:タグ(タグはなくてもよいが最新のものが指定されることになる)
 FROM ruby:2.6.4-alpine
+
+COPY --from=node /usr/local/bin/node /usr/local/bin/node
 
 # Dockerfile内で使用する変数を定義
 # appという値が入る
