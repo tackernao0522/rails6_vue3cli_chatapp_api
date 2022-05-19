@@ -1,7 +1,7 @@
 FROM node:16.13.1-alpine as node
 # ベースイメージを指定する
 # FROM ベースイメージ:タグ(タグはなくてもよいが最新のものが指定されることになる)
-FROM ruby:2.6.4-alpine
+FROM ruby:2.7.2-alpine
 
 COPY --from=node /usr/local/bin/node /usr/local/bin/node
 
